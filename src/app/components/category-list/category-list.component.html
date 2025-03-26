@@ -1,0 +1,10 @@
+<div class="container">
+    <h2>Categorias de Produtos</h2>
+    
+    <ul>
+      <li *ngFor="let category of categories$ | async">
+        {{ category.name }}
+      </li>
+    </ul>
+  </div>
+  

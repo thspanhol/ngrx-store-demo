@@ -1,0 +1,13 @@
+<div class="container">
+    <h2>Lista de Produtos</h2>
+    
+    <button (click)="addNewProduct()">Adicionar Produto</button>
+    
+    <ul>
+      <li *ngFor="let product of products$ | async">
+        {{ product.name }} - R$ {{ product.price | number: '1.2-2' }}
+        <button (click)="removeProduct(product.id)">Remover</button>
+      </li>
+    </ul>
+  </div>
+  
