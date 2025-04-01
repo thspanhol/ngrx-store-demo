@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { CategoryService } from '../services/category.service';
 import { loadCategories, loadCategoriesSuccess, loadCategoriesFailure } from './category.actions';
@@ -7,7 +7,10 @@ import { of } from 'rxjs';
 
 @Injectable()
 export class CategoryEffects {
-  constructor(private actions$: Actions, private categoryService: CategoryService) {}
+
+  actions$ = inject(Actions);
+
+  constructor(private categoryService: CategoryService) {}
 
   loadCategories$ = createEffect(() =>
     this.actions$.pipe(

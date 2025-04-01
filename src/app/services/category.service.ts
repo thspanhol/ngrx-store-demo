@@ -7,7 +7,7 @@ import { Category } from '../models/category.model';
   providedIn: 'root'
 })
 export class CategoryService {
-  private apiUrl = 'https://fakestoreapi.com/products/categories'; // API falsa
+  private apiUrl = 'https://crud-node-a7h4.onrender.com/usuarios';
 
   constructor(private http: HttpClient) {}
 
