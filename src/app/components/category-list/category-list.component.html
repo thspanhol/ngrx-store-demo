@@ -5,7 +5,7 @@
     <ul>
       <li *ngFor="let category of categories$ | async">
         {{ category.nome }}
-        <button (click)="onDelete(category.id+'111')">Delete</button>
+        <button (click)="onDelete(category.id!)">Delete</button>
         <button (click)="onUpdate(testUpdate, category.id!)">Update</button>
       </li>
     </ul>
