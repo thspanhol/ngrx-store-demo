@@ -1,9 +1,12 @@
 <div class="container">
     <h2>Categorias de Produtos</h2>
+    <button (click)="onCreate(testCreate)">Create</button>
     
     <ul>
       <li *ngFor="let category of categories$ | async">
         {{ category.nome }}
+        <button (click)="onDelete(category.id+'111')">Delete</button>
+        <button (click)="onUpdate(testUpdate, category.id!)">Update</button>
       </li>
     </ul>
   </div>
